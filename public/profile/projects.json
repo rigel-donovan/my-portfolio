@@ -1,7 +1,7 @@
 {
     "projects": [
         {
-            "image": "images/projects/temansudut.png",
+            "image": "images/projects/TEMANSUDUT.png",
             "title": "Teman Sudut - Kasir App",
             "bodyText": "- Cross-platform Point of Sales (POS) application for a coffee shop, **Teman Sudut**.\n - Built with **Flutter** for seamless cross-platform support (Android, iOS, Web, Desktop).\n - Backend powered by **Laravel** with **Filament Admin Panel** for real-time sales monitoring.\n - Secure network connectivity using **Tailscale VPN** for Enterprise-grade remote access.\n - Features shift management, transaction history, product & stock management, and PDF report generation.",
             "links": [
