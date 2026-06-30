@@ -1,23 +1,23 @@
 {
-    "education":[
+    "education": [
         {
             "title": "September 2021 - March 2025",
             "cardTitle": "Bachelor Degree, Computer Science",
-            "cardSubtitle":"AMIKOM University, Yogyakarta",
+            "cardSubtitle": "AMIKOM University, Yogyakarta",
             "cardDetailedText": "GPA - 3.67",
             "certificateLink": "https://drive.google.com/file/d/1B4wtNVwVZX2aT4mPv4-7apWV_Fk8pnVd/view?usp=sharing",
-            "icon" : {
-                "src": "images/education/foto.png"
+            "icon": {
+                "src": "images/education/amikom.png"
             }
         },
         {
             "title": "July 2018 - April 2021",
             "cardTitle": "High School, Software Engineering",
-            "cardSubtitle":"State Vocational School Airlangga, Balikpapan",
+            "cardSubtitle": "State Vocational School Airlangga, Balikpapan",
             "cardDetailedText": "Marks - 84/100",
             "certificateLink": "https://drive.google.com/file/d/1leQoiw9CPdu42W7WOJO4V_nTE9wbKYS3/view?usp=sharing",
-            "icon" : {
-                "src": "images/education/foto.png"
+            "icon": {
+                "src": "images/education/airlangga.png"
             }
         }
     ]
