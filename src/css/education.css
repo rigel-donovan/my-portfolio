@@ -1,73 +1,296 @@
-.vertical {
-    justify-content: center;
+/* ============================
+   EDUCATION PAGE - Premium Design
+   ============================ */
+
+/* Page wrapper */
+.edu-page {
+  width: 100%;
+  padding: 20px 0 60px;
+  overflow-x: hidden;
 }
 
-.vertical_alternating {
-    justify-content: center;
+/* ---- Header ---- */
+.edu-header-wrap {
+  text-align: center;
+  margin-bottom: 56px;
+  padding: 0 16px;
 }
 
-/* Timeline date/title column - make longer (wider) so date text has more room */
-div.vertical-item-row > div:first-child {
-    min-width: 140px !important;
-    max-width: 200px !important;
+.edu-header-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: 1.5px solid;
+  border-radius: 99px;
+  padding: 5px 18px;
+  margin-bottom: 14px;
 }
 
-.timeline-item-title {
-    font-size: 1rem !important;
-    min-width: 120px;
-    white-space: normal;
-    line-height: 1.3;
+.edu-header {
+  font-size: 3em;
+  font-weight: 800;
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
-@media only screen and (max-width: 578px) {
-    div.vertical-item-row > div:nth-child(1) {
-        width: 28% !important;
-        min-width: 90px !important;
-        padding-right: 8px !important;
-    }
-    div.vertical-item-row > div:nth-child(2) {
-        width: 54% !important;
-        padding: 0 8px !important;
-    }
-    div.vertical-item-row > div:nth-child(3) {
-        width: 18% !important;
-        padding-left: 8px !important;
-    }
-    
-    /* Card content padding */
-    .timeline-card-content {
-        padding: 12px !important;
-        font-size: 0.9em !important;
-    }
-    
-    /* Title on mobile */
-    .card-title {
-        font-size: 1em !important;
-        margin-bottom: 8px !important;
-    }
-    
-    /* Subtitle on mobile */
-    .card-sub-title {
-        font-size: 0.85em !important;
-    }
+.edu-header-sub {
+  font-size: 1.05rem;
+  font-weight: 400;
+  margin: 0;
 }
 
-/* Container centering and responsive rules for timeline cards */
-.section-content-container {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
+/* ---- Timeline Wrapper ---- */
+.edu-timeline {
+  position: relative;
+  padding: 20px 0 40px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.timeline-card-content img {
-    display: block;
-    max-width: 48px;
-    width: 100%;
-    height: auto;
+/* Center vertical line */
+.edu-timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  transform: translateX(-50%);
+  border-radius: 99px;
 }
 
-@media only screen and (max-width: 420px) {
-    .timeline-card-content img {
-        max-width: 56px;
-    }
+/* ---- Timeline Item ---- */
+.edu-timeline-item {
+  position: relative;
+  width: 46%;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.edu-timeline-item.edu-animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.edu-timeline-item.edu-left {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.edu-timeline-item.edu-right {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* ---- Connector Dot ---- */
+.edu-dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  top: 28px;
+  box-shadow: 0 0 0 4px rgba(61,132,198,0.18), 0 0 16px rgba(61,132,198,0.35);
+  z-index: 2;
+  animation: edu-pulse 2.4s infinite;
+}
+
+.edu-left .edu-dot {
+  right: -8.5%;
+}
+
+.edu-right .edu-dot {
+  left: -8.5%;
+}
+
+@keyframes edu-pulse {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(61,132,198,0.18), 0 0 16px rgba(61,132,198,0.35); }
+  50%       { box-shadow: 0 0 0 8px rgba(61,132,198,0.1),  0 0 28px rgba(61,132,198,0.5); }
+}
+
+/* ---- Card ---- */
+.edu-card {
+  position: relative;
+  border-radius: 18px;
+  border: 2px solid;
+  padding: 28px 26px 22px;
+  overflow: hidden;
+  transition: box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: default;
+}
+
+.edu-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Top color accent bar */
+.edu-card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 99px 99px 0 0;
+}
+
+/* ---- Card Top row (icon + date) ---- */
+.edu-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+/* Icon circle */
+.edu-icon-wrap {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: rgba(61, 132, 198, 0.08);
+}
+
+.edu-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+/* Date/period badge */
+.edu-period {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.edu-period-icon {
+  width: 13px;
+  height: 13px;
+  opacity: 0.85;
+}
+
+/* ---- Card Title ---- */
+.edu-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+/* ---- Card Subtitle ---- */
+.edu-card-subtitle {
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* ---- Divider ---- */
+.edu-divider {
+  height: 1px;
+  margin: 14px 0;
+  border-radius: 99px;
+}
+
+/* ---- Detail Row ---- */
+.edu-detail-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.edu-detail-icon {
+  font-size: 1rem;
+}
+
+.edu-detail-text {
+  font-size: 0.92rem;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+/* ---- Certificate Button ---- */
+.edu-cert-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1.5px solid;
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.edu-cert-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(61,132,198,0.35);
+}
+
+.edu-btn-icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+
+@media (max-width: 768px) {
+  .edu-header {
+    font-size: 2.2em;
+  }
+
+  .edu-timeline-line {
+    left: 18px;
+  }
+
+  .edu-timeline-item {
+    width: 90%;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+
+  .edu-left .edu-dot,
+  .edu-right .edu-dot {
+    left: -11.5%;
+    right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .edu-header {
+    font-size: 1.8em;
+  }
+
+  .edu-card {
+    padding: 22px 18px 18px;
+  }
+
+  .edu-card-title {
+    font-size: 1.05rem;
+  }
+
+  .edu-timeline-item {
+    width: 85%;
+  }
 }
