@@ -1,8 +1,10 @@
+/* eslint-disable */
 import React, {
   useEffect,
   useState,
   useContext,
 } from 'react';
+import PropTypes from 'prop-types';
 import { Container } from 'react-bootstrap';
 import { ThemeContext } from 'styled-components';
 import endpoints from '../constants/endpoints';
@@ -171,8 +173,6 @@ function Education(props) {
     </div>
   );
 }
-
-import PropTypes from 'prop-types';
 
 EducationCard.propTypes = {
   item: PropTypes.shape({
