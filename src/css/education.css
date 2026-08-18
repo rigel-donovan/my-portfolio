@@ -2,11 +2,14 @@
    EDUCATION PAGE - Premium Design
    ============================ */
 
-/* Page wrapper */
+/* Page wrapper — force full width even inside flex parents */
 .edu-page {
-  width: 100%;
-  padding: 20px 0 60px;
+  width: 100vw;
+  min-width: 100vw;
+  max-width: 100vw;
+  padding: 20px 20px 60px;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 /* ---- Header ---- */
@@ -46,7 +49,8 @@
 .edu-timeline {
   position: relative;
   padding: 20px 0 40px;
-  max-width: 900px;
+  max-width: 960px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -64,8 +68,9 @@
 /* ---- Timeline Item ---- */
 .edu-timeline-item {
   position: relative;
-  width: 46%;
-  margin-bottom: 40px;
+  width: calc(50% - 40px);
+  min-width: 280px;
+  margin-bottom: 48px;
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
@@ -99,11 +104,11 @@
 }
 
 .edu-left .edu-dot {
-  right: -8.5%;
+  right: -9%;
 }
 
 .edu-right .edu-dot {
-  left: -8.5%;
+  left: -9%;
 }
 
 @keyframes edu-pulse {
@@ -116,10 +121,13 @@
   position: relative;
   border-radius: 18px;
   border: 2px solid;
-  padding: 28px 26px 22px;
+  padding: 28px 28px 24px;
   overflow: hidden;
   transition: box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
   cursor: default;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .edu-card:hover {
@@ -142,13 +150,14 @@
   align-items: center;
   gap: 12px;
   margin-bottom: 16px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 /* Icon circle */
 .edu-icon-wrap {
   width: 50px;
   height: 50px;
+  min-width: 50px;
   border-radius: 50%;
   border: 2px solid;
   display: flex;
@@ -175,17 +184,19 @@
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .edu-period-icon {
   width: 13px;
   height: 13px;
+  flex-shrink: 0;
   opacity: 0.85;
 }
 
 /* ---- Card Title ---- */
 .edu-card-title {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
   margin: 0 0 6px;
   line-height: 1.3;
@@ -194,7 +205,7 @@
 
 /* ---- Card Subtitle ---- */
 .edu-card-subtitle {
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   font-weight: 600;
   margin: 0;
   opacity: 0.9;
@@ -220,7 +231,7 @@
 }
 
 .edu-detail-text {
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   font-weight: 500;
   opacity: 0.85;
 }
@@ -237,18 +248,21 @@
   text-decoration: none;
   border: 1.5px solid;
   border-radius: 8px;
-  padding: 8px 16px;
+  padding: 9px 18px;
   transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  white-space: nowrap;
 }
 
 .edu-cert-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(61,132,198,0.35);
+  text-decoration: none;
 }
 
 .edu-btn-icon {
   width: 14px;
   height: 14px;
+  flex-shrink: 0;
 }
 
 /* ============================
@@ -261,23 +275,28 @@
   }
 
   .edu-timeline-line {
-    left: 18px;
+    left: 20px;
   }
 
   .edu-timeline-item {
-    width: 90%;
+    width: calc(100% - 50px);
     margin-left: auto !important;
     margin-right: 0 !important;
+    min-width: unset;
   }
 
   .edu-left .edu-dot,
   .edu-right .edu-dot {
-    left: -11.5%;
+    left: -30px;
     right: auto;
   }
 }
 
 @media (max-width: 480px) {
+  .edu-page {
+    padding: 16px 12px 48px;
+  }
+
   .edu-header {
     font-size: 1.8em;
   }
@@ -290,7 +309,21 @@
     font-size: 1.05rem;
   }
 
+  .edu-period {
+    white-space: normal;
+    font-size: 0.72rem;
+  }
+
   .edu-timeline-item {
-    width: 85%;
+    width: 100%;
+    margin-left: 0 !important;
+  }
+
+  .edu-timeline-line {
+    display: none;
+  }
+
+  .edu-dot {
+    display: none;
   }
 }
