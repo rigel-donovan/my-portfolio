@@ -1,6 +1,26 @@
 {
     "projects": [
         {
+            "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+            "title": "TesCAT - Computer Assisted Test Platform",
+            "bodyText": "- Platform for simulating **Computer Assisted Test (CAT)** for **CPNS, Sekolah Kedinasan and Kopdes Merah Putih**.\n - Built to support interactive exam flows with **timer-based question sessions**, scoring, and result analytics.\n - Designed for online assessments with a clean, responsive interface for desktop and mobile users.\n - Suitable for mock exams and recruitment preparation, both for public service and corporate selection.",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/rigel-donovan/teskopdes"
+                }
+            ],
+            "tags": [
+                "Laravel",
+                "PHP",
+                "MySQL",
+                "CAT",
+                "Tryout",
+                "Assessment",
+                "Website"
+            ]
+        },
+        {
             "image": "images/projects/TEMANSUDUT.png",
             "title": "Teman Sudut - Kasir App",
             "bodyText": "- Cross-platform Point of Sales (POS) application for a coffee shop, **Teman Sudut**.\n - Built with **Flutter** for seamless cross-platform support (Android, iOS, Web, Desktop).\n - Backend powered by **Laravel** with **Filament Admin Panel** for real-time sales monitoring.\n - Secure network connectivity using **Tailscale VPN** for Enterprise-grade remote access.\n - Features shift management, transaction history, product & stock management, and PDF report generation.",
