@@ -15,11 +15,11 @@
         "degree": "Bachelor of Information Systems",
         "institution": "AMIKOM University Yogyakarta",
         "year": "2021 - 2025",
-        "gpa": "3.67 out of 4.00",
-        "documents": {
-            "diploma": "https://drive.google.com/file/d/1B4wtNVwVZX2aT4mPv4-7apWV_Fk8pnVd/view?usp=sharing",
-            "transcript": "https://drive.google.com/file/d/1f7G3XW39nbJ-ZJkRelkQ_G11F0m3F440/view?usp=sharing"
-        }
+        // "gpa": "3.67 out of 4.00",
+        // "documents": {
+        //     "diploma": "https://drive.google.com/file/d/1B4wtNVwVZX2aT4mPv4-7apWV_Fk8pnVd/view?usp=sharing",
+        //     "transcript": "https://drive.google.com/file/d/1f7G3XW39nbJ-ZJkRelkQ_G11F0m3F440/view?usp=sharing"
+        // }
     },
     "contact": {
         "phone": "+6285604450227",
