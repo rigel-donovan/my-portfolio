@@ -67,11 +67,6 @@ function Home() {
     >
       <div className="sujuds-hero-container">
         <div className="sujuds-hero-content">
-          {/* Badge */}
-          <div className="sujuds-hero-badge">
-            <span className="sujuds-hero-badge-dot" />
-            <span>Available for Opportunities</span>
-          </div>
 
           {/* Big Bold Name (Sujud Style) */}
           <h1 className="sujuds-hero-name">
