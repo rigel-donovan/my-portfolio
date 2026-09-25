@@ -1,6 +1,30 @@
 {
     "experiences": [
         {
+            "title": "Credit Analyst",
+            "subtitle": "Adira Finance",
+            "subtitle2": "Adira Finance",
+            "workType": "Full-Time",
+            "companyDescription": "Adira Finance is a leading multi-finance company focused on consumer financing solutions with a strong emphasis on prudent credit risk management and service quality.",
+            "workDescription": [
+                "Serve as a member of the credit committee.",
+                "Check for deduplication, additional orders, repeat orders, and blacklist potential customers.",
+                "Analyze creditworthiness and make decisions on credit applications, prioritizing prudent aspects in the Level 1 approval menu and/or SAP forms.",
+                "Verify all supporting information for customer credit requirements.",
+                "Make decision recommendations and distribute them to the Credit Committee above.",
+                "Be responsible for achieving KPI targets.",
+                "Implement the company's credit policy in accordance with applicable SOPs and policies.",
+                "Conduct case analysis based on KPIs when necessary."
+            ],
+            "dateText": "2023 – 2024",
+            "image": "images/experiences/adira.jpg",
+            "images": [
+                "images/experiences/adira-1.jpeg",
+                "images/experiences/adira-2.jpeg",
+                "images/experiences/adira-3.jpg"
+            ]
+        },
+        {
             "title": "Payment Processing Staff",
             "subtitle": "BFI Finance",
             "subtitle2": "BFI Finance - Branch Balikpapan",
