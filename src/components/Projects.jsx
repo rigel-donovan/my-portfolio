@@ -68,7 +68,6 @@ const styles = {
   },
 };
 
-const filterCategories = ['All', 'Laravel & PHP', 'Mobile (Flutter/Android)', 'Machine Learning (AI & Python)'];
 
 const Projects = (props) => {
   const { header } = props;

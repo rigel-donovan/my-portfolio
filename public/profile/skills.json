@@ -1,5 +1,5 @@
 {
-    "intro": "A showcase of technical expertise, development tools, and verified professional achievements.",
+    "intro": "",
     "skills": [
         {
             "category": "Languages & Core",
@@ -47,14 +47,14 @@
             "description": "Sertifikat keahlian dalam Membangun Aplikasi Gen AI dengan Microsoft Azure dari Dicoding Indonesia"
         },
         {
-            "title": "Sertifikat Program Praktek Kerja Lapangan (Software Engineer)",
-            "issuer": "Telkom Indonesia",
-            "logo": "images/certificates/telkom-logo.png",
-            "certificateImage": "images/certificates/TELKOM.png",
-            "issueDate": "Aug 2024",
+            "title": "E-Certificate Payment Processing Staff",
+            "issuer": "PT BFI Finance Indonesia, Tbk",
+            "logo": "images/certificates/bfi-finance-logo.png",
+            "certificateImage": "images/certificates/BFI-PPS.png",
+            "issueDate": "Jun 2025",
             "expiryDate": null,
-            "credentialId": "TEL.0807/PD 620/TR6-R200/2024",
-            "description": "Sertifikat penyelesaian program magang Software Engineer dari Telkom Indonesia Regional VI"
+            "credentialId": null,
+            "description": "Sertifikat keahlian dalam Payment Processing Staff dari PT BFI Finance Indonesia, Tbk"
         },
         {
             "title": "DATA SCIENCE FUNDAMENTAL",
@@ -67,16 +67,6 @@
             "description": "Sertifikat penyelesaian program Data Science Fundamental dari MySkill"
         },
         {
-            "title": "Penghargaan Kompetisi UI/UX Design AMICTA 2023",
-            "issuer": "Universitas AMIKOM Yogyakarta",
-            "logo": "images/certificates/amikom-amicta-logo.png",
-            "certificateImage": "images/certificates/AMICTA 2023.png",
-            "issueDate": "Sep 2023",
-            "expiryDate": null,
-            "credentialId": null,
-            "description": "Penghargaan sebagai Peserta Kompetisi UI/UX Design dalam rangkaian kegiatan AMICTA 2023"
-        },
-        {
             "title": "Sertifikat Amikom English Proficiency Test",
             "issuer": "Universitas AMIKOM Yogyakarta",
             "logo": "images/certificates/amikom-logo.png",
@@ -85,6 +75,45 @@
             "expiryDate": "Mar 2026",
             "credentialId": "#AEPT032506706",
             "description": "Sertifikat Amikom English Proficiency Test dari Universitas AMIKOM Yogyakarta"
+        },
+        {
+            "title": "Sertifikat Program Praktek Kerja Lapangan",
+            "issuer": "Telkom Indonesia",
+            "logo": "images/certificates/telkom-logo.png",
+            "certificateImage": "images/certificates/TELKOM.png",
+            "issueDate": "Aug 2024",
+            "expiryDate": null,
+            "credentialId": "TEL.0807/PD 620/TR6-R200/2024",
+            "description": "Sertifikat penyelesaian program magang Praktek Kerja Lapangan dari Telkom Indonesia"
+        },
+        {
+            "title": "Certificate of Appreciation: Energy System Integration",
+            "issuer": "DTMI Departemen Teknik Mesin dan Industri FT UGM",
+            "certificateImage": "images/certificates/Industrial Workshop UGM.png",
+            "issueDate": "Nov 2023",
+            "expiryDate": null,
+            "credentialId": null,
+            "description": "Certificate of Appreciation untuk Energy System Integration: A Pathway to Increase Efficiency and Reliability Across Industries"
+        },
+        {
+            "title": "Sosialisasi Kebijakan Perdagangan Elektronik (E-Commerce)",
+            "issuer": "Kementerian Perdagangan Republik Indonesia",
+            "logo": "images/certificates/kemdag-logo.png",
+            "certificateImage": "images/certificates/KEMENDAGRI.png",
+            "issueDate": "Nov 2023",
+            "expiryDate": null,
+            "credentialId": null,
+            "description": "Sertifikat kehadiran Sosialisasi Kebijakan di Bidang Perdagangan Melalui Sistem Elektronik (E-Commerce)"
+        },
+        {
+            "title": "Penghargaan Kompetisi UI/UX Design AMICTA 2023",
+            "issuer": "Universitas AMIKOM Yogyakarta",
+            "logo": "images/certificates/amikom-amicta-logo.png",
+            "certificateImage": "images/certificates/AMICTA 2023.png",
+            "issueDate": "Sep 2023",
+            "expiryDate": null,
+            "credentialId": null,
+            "description": "Penghargaan sebagai Peserta Kompetisi UI/UX Design dalam rangkaian kegiatan AMICTA 2023 \"Get up, Innovate, and Forward\""
         }
     ]
 }
