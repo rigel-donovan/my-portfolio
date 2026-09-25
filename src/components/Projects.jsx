@@ -67,20 +67,18 @@ const styles = {
     maxWidth: '100%',
   },
 };
-
-const filterCategories = [
-  'All',
-  'Laravel & PHP',
-  'Mobile (Flutter/Android)',
-  'AI & Python',
-];
-
 const Projects = (props) => {
   const { header } = props;
   const theme = useContext(ThemeContext);
   const [data, setData] = useState(null);
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeFilter, setActiveFilter] = useState('All');
+  const filterCategories = [
+    'All',
+    'Laravel & PHP',
+    'Mobile (Flutter/Android)',
+    'AI & Python',
+  ];
 
   useEffect(() => {
     fetch(endpoints.projects, {

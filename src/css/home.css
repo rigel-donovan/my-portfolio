@@ -1,0 +1,324 @@
+/* =========================================================
+   Home Page - Sujuds-Inspired Cinematic Hero Layout
+   ========================================================= */
+
+.sujuds-home-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  background-color: #0a0a0a;
+  background-repeat: no-repeat;
+  background-position: right 10% center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+/* Subtle particle/vignette glow */
+.sujuds-home-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(61, 132, 198, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.sujuds-hero-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+  z-index: 2;
+}
+
+.sujuds-hero-content {
+  max-width: 680px;
+  animation: sujudsFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.sujuds-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #7eb8f0;
+  font-size: 0.88em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.sujuds-hero-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #38bdf8;
+  box-shadow: 0 0 10px #38bdf8;
+  display: inline-block;
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+.sujuds-hero-name {
+  font-size: clamp(2.8rem, 6.2vw, 5rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  margin: 0 0 16px 0;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+}
+
+.sujuds-hero-name span {
+  color: #e2e8f0;
+  font-weight: 700;
+}
+
+.sujuds-hero-headline {
+  font-size: clamp(1.25rem, 2.6vw, 2.1rem);
+  font-weight: 500;
+  color: #e0e6ed;
+  margin: 0 0 24px 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.sujuds-typewriter-text {
+  font-weight: 700;
+  color: #4fa3e3;
+  border-bottom: 2px solid rgba(79, 163, 227, 0.4);
+  padding-bottom: 2px;
+}
+
+.sujuds-hero-bio {
+  font-size: 1.05em;
+  line-height: 1.75;
+  color: #94a3b8;
+  margin: 0 0 32px 0;
+  max-width: 580px;
+}
+
+/* Call-to-Action Buttons */
+.sujuds-btn-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.sujuds-btn-primary {
+  padding: 13px 28px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #3D84C6, #1f5ca3);
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 0.96em;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  box-shadow: 0 6px 20px rgba(61, 132, 198, 0.45);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.sujuds-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(61, 132, 198, 0.65);
+  background: linear-gradient(135deg, #4b94da, #2b6db7);
+}
+
+.sujuds-btn-secondary {
+  padding: 13px 26px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #f1f5f9 !important;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 0.96em;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sujuds-btn-secondary:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #3D84C6;
+  color: #ffffff !important;
+}
+
+.sujuds-btn-tertiary {
+  padding: 13px 24px;
+  border-radius: 30px;
+  background: transparent;
+  color: #94a3b8 !important;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 0.96em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+}
+
+.sujuds-btn-tertiary:hover {
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+/* Vertical Social Column on Right (Sujud's Signature Style) */
+.sujuds-social-fixed {
+  position: absolute;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  z-index: 10;
+}
+
+.sujuds-social-line {
+  width: 1px;
+  height: 50px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.25));
+}
+
+.sujuds-social-line.bottom {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25), transparent);
+}
+
+.sujuds-social-icon-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.sujuds-social-icon-btn:hover {
+  color: #ffffff;
+  background: #3D84C6;
+  border-color: #3D84C6;
+  transform: scale(1.15) translateX(-3px);
+  box-shadow: 0 4px 16px rgba(61, 132, 198, 0.5);
+}
+
+.sujuds-social-icon-svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* Keyframes */
+@keyframes sujudsFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.85);
+  }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1100px) {
+  .sujuds-home-wrapper {
+    background-position: right 0% center;
+  }
+}
+
+@media (max-width: 900px) {
+  .sujuds-home-wrapper {
+    background-position: center top;
+    text-align: center;
+    padding: 60px 0 80px 0;
+  }
+
+  .sujuds-hero-content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sujuds-hero-headline {
+    justify-content: center;
+  }
+
+  .sujuds-btn-group {
+    justify-content: center;
+  }
+
+  .sujuds-social-fixed {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 24px;
+    gap: 14px;
+  }
+
+  .sujuds-social-line {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .sujuds-hero-container {
+    padding: 0 20px;
+  }
+
+  .sujuds-btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .sujuds-btn-primary,
+  .sujuds-btn-secondary,
+  .sujuds-btn-tertiary {
+    width: 100%;
+    justify-content: center;
+  }
+}

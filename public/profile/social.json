@@ -1,15 +1,23 @@
 {
     "social": [
         {
-            "network" : "linkedin",
+            "network": "linkedin",
             "href": "https://linkedin.com/in/rigel-donovan"
         },
         {
-            "network" : "github",
+            "network": "github",
             "href": "https://github.com/rigel-sayudha"
         },
         {
-            "network" : "email",
+            "network": "instagram",
+            "href": "https://www.instagram.com/rigeldonovan/"
+        },
+        {
+            "network": "whatsapp",
+            "href": "https://wa.me/6285604450227"
+        },
+        {
+            "network": "email",
             "href": "mailto:rigeldonovan@gmail.com"
         }
     ]
