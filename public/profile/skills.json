@@ -2,7 +2,6 @@
     "intro": "",
     "skills": [
         {
-            "category": "Languages & Core",
             "items": [
                 {
                     "title": "PHP",
@@ -27,12 +26,19 @@
                 {
                     "title": "CSS3",
                     "icon": "images/skills/css.png"
+                },
+                {
+                    "title": "Dart",
+                    "icon": "images/skills/dart.svg"
                 }
             ]
         },
         {
-            "category": "Frameworks & Libraries",
             "items": [
+                {
+                    "title": "Flutter",
+                    "icon": "images/skills/flutter.svg"
+                },
                 {
                     "title": "Laravel",
                     "icon": "images/skills/laravel.png"
@@ -60,7 +66,6 @@
             ]
         },
         {
-            "category": "Databases & Developer Tools",
             "items": [
                 {
                     "title": "MySQL",
@@ -168,6 +173,15 @@
             "expiryDate": null,
             "credentialId": null,
             "description": "Penghargaan sebagai Peserta Kompetisi UI/UX Design dalam rangkaian kegiatan AMICTA 2023 \"Get up, Innovate, and Forward\""
+        },
+        {
+            "title": "Sertifikat Uji Kemahiran Berbahasa Indonesia (UKBI)",
+            "issuer": "Badan Pengembangan dan Pembinaan Bahasa",
+            "certificateImage": "images/certificates/ukbi.png",
+            "issueDate": "Jul 2026",
+            "expiryDate": "Jul 2028",
+            "credentialId": "SD-BB-1318349",
+            "description": "Sertifikat Uji Kemahiran Berbahasa Indonesia dengan predikat Sangat Unggul (Skor 652)"
         }
     ]
 }

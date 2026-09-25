@@ -102,7 +102,7 @@ const Projects = (props) => {
     if (activeFilter === 'Mobile (Flutter/Android)') {
       return tags.some((t) => ['Flutter', 'Android', 'Kotlin'].includes(t));
     }
-    if (activeFilter === 'AI & Python') {
+    if (activeFilter === 'Machine Learning (AI & Python)' || activeFilter === 'AI & Python') {
       return tags.some((t) => ['Python', 'Streamlit', 'AI', 'Machine Learning', 'Chatbot'].includes(t));
     }
     return true;

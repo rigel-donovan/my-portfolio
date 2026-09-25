@@ -145,60 +145,11 @@ function Skills() {
         <>
           <div className="section-content-container">
             <Container>
-              {/* Technical Skills Section */}
-              {data.skills && (
-                <div className="tech-skills-section">
-                  <div style={{ marginBottom: 35, textAlign: 'center' }}>
-                    <h2 style={{ color: theme.color }}>
-                      Technical Skills &amp; Tech Stack
-                    </h2>
-                    <p style={{ color: theme.accentColor, fontSize: '0.95em', margin: '8px 0 0 0' }}>
-                      Technologies, frameworks, and developer tools I work with
-                    </p>
-                  </div>
-
-                  {data.skills.map((categoryGroup) => (
-                    <div key={categoryGroup.category} className="skill-category-block">
-                      <h4 className="skill-category-title" style={{ color: theme.color }}>
-                        <span style={{ color: theme.accentColor }}>⚡</span>
-                        {' '}
-                        {categoryGroup.category}
-                      </h4>
-                      <div className="skill-cards-grid">
-                        {categoryGroup.items?.map((item) => (
-                          <div
-                            key={item.title}
-                            className="skill-item-card"
-                            style={{
-                              backgroundColor: theme.cardBackground || (theme.bsPrimaryVariant === 'dark' ? '#1c1c1c' : '#ffffff'),
-                              border: `1px solid ${theme.cardBorderColor || 'rgba(128,128,128,0.2)'}`,
-                              boxShadow: '0 4px 12px rgba(0,0,0,0.06)',
-                            }}
-                          >
-                            <img
-                              src={item.icon}
-                              alt={item.title}
-                              className="skill-item-icon"
-                            />
-                            <span className="skill-item-title" style={{ color: theme.color }}>
-                              {item.title}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-
               {/* Title */}
-              <div style={{ marginBottom: 35, textAlign: 'center' }}>
+              <div style={{ marginBottom: 40, textAlign: 'center' }}>
                 <h2 style={{ color: theme.color }}>
-                  Achievements &amp; Certifications
+                  Achievements and Certifications
                 </h2>
-                <p style={{ color: theme.accentColor, fontSize: '0.95em', margin: '8px 0 0 0' }}>
-                  Click certificate card to preview full document
-                </p>
               </div>
 
               {/* Certificates Grid */}
@@ -225,14 +176,14 @@ function Skills() {
                     >
                       {/* Certificate Image Only */}
                       {cert.certificateImage && (
-                      <div style={{ position: 'relative', overflow: 'hidden', flex: 1 }}>
-                        <img
-                          className="certificate-image"
-                          src={cert.certificateImage}
-                          alt={cert.title}
-                          style={styles.cardImage}
-                        />
-                      </div>
+                        <div style={{ position: 'relative', overflow: 'hidden', flex: 1 }}>
+                          <img
+                            className="certificate-image"
+                            src={cert.certificateImage}
+                            alt={cert.title}
+                            style={styles.cardImage}
+                          />
+                        </div>
                       )}
                     </div>
                   </div>
@@ -268,7 +219,7 @@ function Skills() {
             </Container>
           </div>
         </>
-      ) : <FallbackSpinner /> }
+      ) : <FallbackSpinner />}
 
       {/* Modal Popup */}
       {selectedCertificate && (

@@ -1,7 +1,7 @@
 {
     "projects": [
         {
-            "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+            "image": "#",
             "title": "TesCAT - Computer Assisted Test Platform",
             "bodyText": "- Platform for simulating **Computer Assisted Test (CAT)** for **CPNS, Sekolah Kedinasan and Kopdes Merah Putih**.\n - Built to support interactive exam flows with **timer-based question sessions**, scoring, and result analytics.\n - Designed for online assessments with a clean, responsive interface for desktop and mobile users.\n - Suitable for mock exams and recruitment preparation, both for public service and corporate selection.",
             "links": [
@@ -13,8 +13,9 @@
             "tags": [
                 "Laravel",
                 "PHP",
+                "Next.js",
                 "MySQL",
-                "CAT",
+                "Computer Assisted Test",
                 "Tryout",
                 "Assessment",
                 "Website"
