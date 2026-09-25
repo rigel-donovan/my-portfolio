@@ -1,8 +1,10 @@
 import React, { useEffect, useState, useContext } from 'react';
+import PropTypes from 'prop-types';
 import { Container } from 'react-bootstrap';
 import { ThemeContext } from 'styled-components';
 import endpoints from '../constants/endpoints';
 import FallbackSpinner from './FallbackSpinner';
+import Header from './Header';
 import '../css/skills.css';
 
 const styles = {
@@ -116,7 +118,8 @@ const styles = {
   },
 };
 
-function Skills() {
+function Skills(props) {
+  const { header } = props;
   const theme = useContext(ThemeContext);
   const [data, setData] = useState(null);
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -141,84 +144,77 @@ function Skills() {
 
   return (
     <>
+      <Header title={header || 'Skills & Certifications'} />
       {data ? (
-        <>
-          <div className="section-content-container">
-            <Container>
-              {/* Title */}
-              <div style={{ marginBottom: 40, textAlign: 'center' }}>
-                <h2 style={{ color: theme.color }}>
-                  Achievements and Certifications
-                </h2>
-              </div>
+        <div className="section-content-container">
+          <Container>
 
-              {/* Certificates Grid */}
-              <div className="certificates-grid">
-                {data.certificates?.map((cert, index) => (
-                  <div key={cert.title}>
-                    <div
-                      className="certificate-card"
-                      style={{
-                        ...styles.certificateCard,
-                        borderColor: theme.accentColor || '#4a90e2',
-                        backgroundColor: theme.highlightColor || 'transparent',
-                        ...(hoveredCard === index && styles.cardHover),
-                      }}
-                      onMouseEnter={() => setHoveredCard(index)}
-                      onMouseLeave={() => setHoveredCard(null)}
-                      onClick={() => handleCertificateClick(cert)}
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter') handleCertificateClick(cert);
-                      }}
-                      tabIndex={0}
-                      role="button"
-                      aria-pressed="false"
-                    >
-                      {/* Certificate Image Only */}
-                      {cert.certificateImage && (
-                        <div style={{ position: 'relative', overflow: 'hidden', flex: 1 }}>
-                          <img
-                            className="certificate-image"
-                            src={cert.certificateImage}
-                            alt={cert.title}
-                            style={styles.cardImage}
-                          />
-                        </div>
-                      )}
+            {/* Certificates Grid */}
+            <div className="certificates-grid">
+              {data.certificates?.map((cert, index) => (
+                <div key={cert.title}>
+                  <div
+                    className="certificate-card"
+                    style={{
+                      ...styles.certificateCard,
+                      borderColor: theme.accentColor || '#4a90e2',
+                      backgroundColor: theme.highlightColor || 'transparent',
+                      ...(hoveredCard === index && styles.cardHover),
+                    }}
+                    onMouseEnter={() => setHoveredCard(index)}
+                    onMouseLeave={() => setHoveredCard(null)}
+                    onClick={() => handleCertificateClick(cert)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') handleCertificateClick(cert);
+                    }}
+                    tabIndex={0}
+                    role="button"
+                    aria-pressed="false"
+                  >
+                    {/* Certificate Image Only */}
+                    {cert.certificateImage && (
+                    <div style={{ position: 'relative', overflow: 'hidden', flex: 1 }}>
+                      <img
+                        className="certificate-image"
+                        src={cert.certificateImage}
+                        alt={cert.title}
+                        style={styles.cardImage}
+                      />
                     </div>
+                    )}
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
+            </div>
 
-              <div style={{ marginTop: 32 }}>
+            <div style={{ marginTop: 32 }}>
+              <div
+                style={{
+                  ...styles.scholarshipCard,
+                  borderColor: theme.accentColor || '#4a90e2',
+                }}
+              >
                 <div
                   style={{
-                    ...styles.scholarshipCard,
-                    borderColor: theme.accentColor || '#4a90e2',
+                    ...styles.scholarshipBar,
+                    backgroundColor: theme.accentColor || '#4a90e2',
                   }}
-                >
-                  <div
-                    style={{
-                      ...styles.scholarshipBar,
-                      backgroundColor: theme.accentColor || '#4a90e2',
-                    }}
-                  />
-                  <div style={styles.scholarshipContent}>
-                    <div style={{ ...styles.scholarshipTitle, color: theme.color }}>
-                      Recipient of the Kaltim Tuntas Scholarship 2023–2025
-                    </div>
-                    <p style={{ ...styles.scholarshipDesc, color: theme.color }}>
-                      A scholarship awarded by the East Kalimantan Provincial Government
-                      for outstanding students, supporting the completion of studies without
-                      financial burden.
-                    </p>
+                />
+                <div style={styles.scholarshipContent}>
+                  <div style={{ ...styles.scholarshipTitle, color: theme.color }}>
+                    Recipient of the Kaltim Tuntas Scholarship 2023–2025
                   </div>
-                  <div style={styles.scholarshipIcon} aria-hidden="true">🎓</div>
+                  <p style={{ ...styles.scholarshipDesc, color: theme.color }}>
+                    A scholarship awarded by the East Kalimantan Provincial Government
+                    for outstanding students, supporting the completion of studies without
+                    financial burden.
+                  </p>
                 </div>
+                <div style={styles.scholarshipIcon} aria-hidden="true">🎓</div>
               </div>
-            </Container>
-          </div>
-        </>
+            </div>
+          </Container>
+        </div>
       ) : <FallbackSpinner />}
 
       {/* Modal Popup */}
@@ -264,5 +260,13 @@ function Skills() {
     </>
   );
 }
+
+Skills.propTypes = {
+  header: PropTypes.string,
+};
+
+Skills.defaultProps = {
+  header: 'Skills & Certifications',
+};
 
 export default Skills;

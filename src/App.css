@@ -97,14 +97,4 @@ section.timeline-card-content div.card-description>p {
     margin-top: 0;
     padding-bottom: 88px;
   }
-
-  .header {
-    font-size: 2em;
-  }
-}
-
-.header {
-  font-size: 3em;
-  font-weight: bold;
-  margin-bottom: 25px;
 }

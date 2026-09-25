@@ -9,6 +9,7 @@ import { Container } from 'react-bootstrap';
 import { ThemeContext } from 'styled-components';
 import endpoints from '../constants/endpoints';
 import FallbackSpinner from './FallbackSpinner';
+import Header from './Header';
 import '../css/education.css';
 
 function EducationCard({ item, index, theme, isVisible }) {
@@ -140,15 +141,7 @@ function Education(props) {
   return (
     <div className="edu-page">
       {/* Section header */}
-      <div className="edu-header-wrap">
-        <div className="edu-header-badge" style={{ color: theme.accentColor, borderColor: `${theme.accentColor}40` }}>
-          Academic Journey
-        </div>
-        <h1 className="edu-header" style={{ color: theme.color }}>{header}</h1>
-        <p className="edu-header-sub" style={{ color: `${theme.color}80` }}>
-          My educational background and qualifications
-        </p>
-      </div>
+      <Header title={header} />
 
       {data ? (
         <Container>

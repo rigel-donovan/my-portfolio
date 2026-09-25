@@ -316,12 +316,6 @@ function About(props) {
         <Container>
           {data ? (
             <>
-              {/* Title Section */}
-              <div style={{ textAlign: 'center', marginBottom: 40 }}>
-                <p style={{ ...styles.titleText, color: theme.accentColor }}>
-                  {data.title}
-                </p>
-              </div>
 
               {/* Main Content */}
               <Row style={{ marginBottom: 40 }}>
