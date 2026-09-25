@@ -59,84 +59,98 @@ function Home() {
   }, []);
 
   return data ? (
-    <div
-      className="sujuds-home-wrapper"
-      style={{
-        backgroundImage: `linear-gradient(to right, rgba(10, 10, 10, 0.94) 0%, rgba(10, 10, 10, 0.72) 42%, rgba(10, 10, 10, 0.2) 75%, rgba(10, 10, 10, 0.9) 100%), url(${process.env.PUBLIC_URL}/images/home-hero-bg.jpg)`,
-      }}
-    >
+    <div className="sujuds-home-wrapper">
       <div className="sujuds-hero-container">
-        <div className="sujuds-hero-content">
+        <div className="sujuds-hero-grid">
+          {/* Left Column: Text & CTAs */}
+          <div className="sujuds-hero-left">
+            {/* Status Badge */}
+            <div className="sujuds-hero-badge">
+              <span className="sujuds-hero-badge-dot" />
+              <span>Available for Opportunities</span>
+            </div>
 
-          {/* Big Bold Name (Sujud Style) */}
-          <h1 className="sujuds-hero-name">
-            Rigel
-            {' '}
-            <span>Donovan</span>
-          </h1>
+            {/* Big Bold Name (Sujud Style) */}
+            <h1 className="sujuds-hero-name">
+              Rigel
+              {' '}
+              <span>Donovan</span>
+            </h1>
 
-          {/* Subtitle with Typewriter */}
-          <h4 className="sujuds-hero-headline">
-            <span>I’m a</span>
-            <span className="sujuds-typewriter-text">
-              <Typewriter
-                options={{
-                  loop: true,
-                  autoStart: true,
-                  strings: data?.roles || [
-                    'Credit & Risk Analyst',
-                    'Software Engineer',
-                    'Information Systems Graduate',
-                    'Full Stack Developer',
-                  ],
-                }}
-              />
-            </span>
-          </h4>
+            {/* Subtitle with Typewriter */}
+            <h4 className="sujuds-hero-headline">
+              <span>I’m a</span>
+              <span className="sujuds-typewriter-text">
+                <Typewriter
+                  options={{
+                    loop: true,
+                    autoStart: true,
+                    strings: data?.roles || [
+                      'Credit & Risk Analyst',
+                      'Software Engineer',
+                      'Information Systems Graduate',
+                      'Full Stack Developer',
+                    ],
+                  }}
+                />
+              </span>
+            </h4>
 
-          {/* Bio text if available */}
-          {data.bio && (
-            <p className="sujuds-hero-bio">
-              {data.bio}
-            </p>
-          )}
-
-          {/* Call to Actions */}
-          <div className="sujuds-btn-group">
-            <Link to="/projects" className="sujuds-btn-primary">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                <line x1="8" y1="21" x2="16" y2="21" />
-                <line x1="12" y1="17" x2="12" y2="21" />
-              </svg>
-              <span>Explore Portfolio</span>
-            </Link>
-
-            {data.resumeUrl && (
-              <a
-                href={data.resumeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="sujuds-btn-secondary"
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                  <polyline points="14 2 14 8 20 8" />
-                  <line x1="16" y1="13" x2="8" y2="13" />
-                  <line x1="16" y1="17" x2="8" y2="17" />
-                  <polyline points="10 9 9 9 8 9" />
-                </svg>
-                <span>Resume / CV</span>
-              </a>
+            {/* Bio text if available */}
+            {data.bio && (
+              <p className="sujuds-hero-bio">
+                {data.bio}
+              </p>
             )}
 
-            <Link to="/about" className="sujuds-btn-tertiary">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                <circle cx="12" cy="7" r="4" />
-              </svg>
-              <span>About Me</span>
-            </Link>
+            {/* Call to Actions */}
+            <div className="sujuds-btn-group">
+              <Link to="/projects" className="sujuds-btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg>
+                <span>Explore Portfolio</span>
+              </Link>
+
+              {data.resumeUrl && (
+                <a
+                  href={data.resumeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="sujuds-btn-secondary"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="16" y1="13" x2="8" y2="13" />
+                    <line x1="16" y1="17" x2="8" y2="17" />
+                    <polyline points="10 9 9 9 8 9" />
+                  </svg>
+                  <span>Resume / CV</span>
+                </a>
+              )}
+
+              <Link to="/about" className="sujuds-btn-tertiary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+                <span>About Me</span>
+              </Link>
+            </div>
+          </div>
+
+          {/* Right Column: High-Impact Portrait */}
+          <div className="sujuds-hero-right">
+            <div className="sujuds-portrait-frame">
+              <img
+                src={`${process.env.PUBLIC_URL}/images/rigel-bw.png`}
+                alt={data.name || 'Rigel Donovan'}
+                className="sujuds-portrait-img"
+              />
+            </div>
           </div>
         </div>
       </div>

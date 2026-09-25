@@ -1,22 +1,21 @@
 /* =========================================================
-   Home Page - Sujuds-Inspired Cinematic Hero Layout
+   Home Page - Sujuds-Inspired Cinematic Responsive Hero
    ========================================================= */
 
 .sujuds-home-wrapper {
   position: relative;
   width: 100%;
-  min-height: calc(100vh - 70px);
-  background-color: #0a0a0a;
-  background-repeat: no-repeat;
-  background-position: right 10% center;
-  background-size: cover;
+  min-height: calc(100vh - 60px);
+  background: radial-gradient(circle at 75% 35%, rgba(61, 132, 198, 0.08) 0%, transparent 60%), #0a0a0a;
   display: flex;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
   padding: 40px 0;
+  box-sizing: border-box;
 }
 
-/* Subtle particle/vignette glow */
+/* Subtle background vignette */
 .sujuds-home-wrapper::before {
   content: '';
   position: absolute;
@@ -24,40 +23,53 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 20% 50%, rgba(61, 132, 198, 0.08) 0%, transparent 60%);
+  background: radial-gradient(circle at 20% 50%, rgba(61, 132, 198, 0.06) 0%, transparent 65%);
   pointer-events: none;
 }
 
 .sujuds-hero-container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 40px;
   position: relative;
   z-index: 2;
+  box-sizing: border-box;
 }
 
-.sujuds-hero-content {
-  max-width: 680px;
+.sujuds-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 40px;
+  min-height: calc(100vh - 140px);
+}
+
+/* Left Column */
+.sujuds-hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  z-index: 3;
   animation: sujudsFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+/* Badge */
 .sujuds-hero-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 14px;
+  padding: 7px 16px;
   border-radius: 30px;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.12);
   color: #7eb8f0;
-  font-size: 0.88em;
+  font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .sujuds-hero-badge-dot {
@@ -70,8 +82,9 @@
   animation: pulseDot 2s infinite ease-in-out;
 }
 
+/* Main Name */
 .sujuds-hero-name {
-  font-size: clamp(2.8rem, 6.2vw, 5rem);
+  font-size: clamp(2.8rem, 5.2vw, 4.8rem);
   font-weight: 800;
   color: #ffffff;
   letter-spacing: -0.03em;
@@ -81,15 +94,16 @@
 }
 
 .sujuds-hero-name span {
-  color: #e2e8f0;
+  color: #cbd5e1;
   font-weight: 700;
 }
 
+/* Headline */
 .sujuds-hero-headline {
-  font-size: clamp(1.25rem, 2.6vw, 2.1rem);
+  font-size: clamp(1.2rem, 2.2vw, 1.85rem);
   font-weight: 500;
-  color: #e0e6ed;
-  margin: 0 0 24px 0;
+  color: #e2e8f0;
+  margin: 0 0 20px 0;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -99,26 +113,26 @@
 
 .sujuds-typewriter-text {
   font-weight: 700;
-  color: #4fa3e3;
-  border-bottom: 2px solid rgba(79, 163, 227, 0.4);
+  color: #3D84C6;
+  border-bottom: 2px solid rgba(61, 132, 198, 0.5);
   padding-bottom: 2px;
 }
 
+/* Bio */
 .sujuds-hero-bio {
-  font-size: 1.05em;
+  font-size: 1rem;
   line-height: 1.75;
   color: #94a3b8;
   margin: 0 0 32px 0;
-  max-width: 580px;
+  max-width: 540px;
 }
 
-/* Call-to-Action Buttons */
+/* CTA buttons */
 .sujuds-btn-group {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 14px;
-  margin-bottom: 28px;
 }
 
 .sujuds-btn-primary {
@@ -128,11 +142,11 @@
   color: #ffffff !important;
   text-decoration: none !important;
   font-weight: 600;
-  font-size: 0.96em;
+  font-size: 0.95rem;
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  box-shadow: 0 6px 20px rgba(61, 132, 198, 0.45);
+  box-shadow: 0 6px 20px rgba(61, 132, 198, 0.4);
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -147,12 +161,10 @@
   padding: 13px 26px;
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   color: #f1f5f9 !important;
   text-decoration: none !important;
   font-weight: 600;
-  font-size: 0.96em;
+  font-size: 0.95rem;
   display: inline-flex;
   align-items: center;
   gap: 9px;
@@ -168,13 +180,13 @@
 }
 
 .sujuds-btn-tertiary {
-  padding: 13px 24px;
+  padding: 13px 22px;
   border-radius: 30px;
   background: transparent;
   color: #94a3b8 !important;
   text-decoration: none !important;
   font-weight: 600;
-  font-size: 0.96em;
+  font-size: 0.95rem;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -186,37 +198,81 @@
   transform: translateY(-2px);
 }
 
-/* Vertical Social Column on Right (Sujud's Signature Style) */
-.sujuds-social-fixed {
+/* Right Column - Portrait Frame */
+.sujuds-hero-right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  animation: sujudsFadeUp 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.sujuds-portrait-frame {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.sujuds-portrait-frame::before {
+  content: '';
   position: absolute;
-  right: 28px;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(61, 132, 198, 0.16) 0%, transparent 70%);
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sujuds-portrait-img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.9)) contrast(1.08) brightness(0.95);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Right Fixed Social Bar */
+.sujuds-social-fixed {
+  position: fixed;
+  right: 24px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  z-index: 10;
+  z-index: 99;
 }
 
 .sujuds-social-line {
   width: 1px;
-  height: 50px;
-  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.25));
+  height: 45px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.2));
 }
 
 .sujuds-social-line.bottom {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25), transparent);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), transparent);
 }
 
 .sujuds-social-icon-btn {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: #cbd5e1;
+  color: #94a3b8;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
@@ -234,12 +290,12 @@
 }
 
 .sujuds-social-icon-svg {
-  width: 18px;
-  height: 18px;
+  width: 17px;
+  height: 17px;
   fill: currentColor;
 }
 
-/* Keyframes */
+/* Animations */
 @keyframes sujudsFadeUp {
   from {
     opacity: 0;
@@ -263,24 +319,28 @@
 }
 
 /* Responsive Breakpoints */
-@media (max-width: 1100px) {
-  .sujuds-home-wrapper {
-    background-position: right 0% center;
-  }
-}
-
-@media (max-width: 900px) {
-  .sujuds-home-wrapper {
-    background-position: center top;
+@media (max-width: 992px) {
+  .sujuds-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-top: 20px;
     text-align: center;
-    padding: 60px 0 80px 0;
   }
 
-  .sujuds-hero-content {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
+  .sujuds-hero-left {
     align-items: center;
+    text-align: center;
+    order: 2;
+  }
+
+  .sujuds-hero-right {
+    order: 1;
+    justify-content: center;
+  }
+
+  .sujuds-portrait-img {
+    max-height: 45vh;
+    max-width: 300px;
   }
 
   .sujuds-hero-headline {
@@ -298,6 +358,7 @@
     justify-content: center;
     margin-top: 24px;
     gap: 14px;
+    order: 3;
   }
 
   .sujuds-social-line {
@@ -308,6 +369,11 @@
 @media (max-width: 576px) {
   .sujuds-hero-container {
     padding: 0 20px;
+  }
+
+  .sujuds-portrait-img {
+    max-height: 35vh;
+    max-width: 240px;
   }
 
   .sujuds-btn-group {
