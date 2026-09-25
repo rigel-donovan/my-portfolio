@@ -77,11 +77,14 @@ const icons = {
 const iconMap = {
   Home: 'home',
   About: 'about',
+  Skills: 'achievements',
   'Skills & Certifications': 'achievements',
   'Achievements & Certifications': 'achievements',
   Education: 'education',
   Projects: 'projects',
+  Experience: 'work',
   'Work Experience': 'work',
+  Organization: 'organization',
   'Organizational Experience': 'organization',
   Resume: 'resume',
 };

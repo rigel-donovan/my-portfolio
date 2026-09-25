@@ -1,8 +1,9 @@
 {
     "logo": {
         "source": "images/foto.png",
-        "height": 45,
-        "width": 50
+        "height": 40,
+        "width": 40,
+        "title": "Rigel Donovan"
     },
     "sections": [
         {
@@ -18,7 +19,7 @@
             "bottomNav": true
         },
         {
-            "title": "Skills & Certifications",
+            "title": "Skills",
             "href": "/skills",
             "icon": "🏆",
             "bottomNav": true
@@ -30,12 +31,12 @@
             "bottomNav": true
         },
         {
-            "title": "Work Experience",
+            "title": "Experience",
             "href": "/experience",
             "icon": "💼"
         },
         {
-            "title": "Organizational Experience",
+            "title": "Organization",
             "href": "/organizational",
             "icon": "🤝"
         },

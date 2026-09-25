@@ -10,42 +10,13 @@
 }
 
 .navbar-custom {
-  font-size: large;
+  font-size: 0.95rem;
 }
 
 .navbar__link {
-  margin-left: 0.75em;
-  margin-right: 0.75em;
-  font-size: 1em;
   cursor: pointer;
-  text-decoration: none;
-  letter-spacing: .1em;
-  text-indent: .3em;
-  border-bottom: 3px solid transparent;
-}
-
-.navbar__link::after {
-  transition: all ease-in-out .2s;
-  background: none repeat scroll 0 0;
-  content: "";
-  display: block;
-  margin-top: 2px;
-  height: 3px;
-  width: 0;
-}
-
-.navbar__link:hover::after {
-  visibility: visible;
-  width: 40%;
-}
-
-.navbar__link--active::after {
-  transition: all ease-in-out .2s;
-  width: 100%;
-}
-
-.navbar__link--active:hover::after {
-  width: 100%;
+  text-decoration: none !important;
+  white-space: nowrap;
 }
 
 .MainApp {
@@ -120,44 +91,11 @@ section.timeline-card-content div.card-description>p {
 }
 
 
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-
-  .navbar__link {
-    margin-left: 0.4em;
-    margin-right: 0.4em;
-    font-size: 0.9em;
-    cursor: pointer;
-    letter-spacing: .1em;
-    text-indent: .2em;
-  }
-}
-
 @media (max-width: 768px) {
 
   .MainApp {
     margin-top: 0;
     padding-bottom: 88px;
-  }
-
-  .navbar__link::after {
-    background: none;
-    content: "";
-    display: none;
-    margin-top: 0;
-    height: 0;
-    width: 0;
-  }
-
-  .navbar__link--active::after {
-    width: 0;
-  }
-
-  .navbar__link--active:hover::after {
-    width: 0;
-  }
-
-  .navbar__link:hover::after {
-    width: 0;
   }
 
   .header {
