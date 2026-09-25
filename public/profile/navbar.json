@@ -1,10 +1,4 @@
 {
-    "logo": {
-        "source": "images/foto.png",
-        "height": 40,
-        "width": 40,
-        "title": "Rigel Donovan"
-    },
     "sections": [
         {
             "title": "Home",

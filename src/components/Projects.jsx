@@ -7,6 +7,8 @@ import endpoints from '../constants/endpoints';
 import ProjectCard from './projects/ProjectCard';
 import FallbackSpinner from './FallbackSpinner';
 
+const filterCategories = ['All', 'Laravel & PHP', 'Mobile (Flutter/Android)', 'AI & Python'];
+
 const styles = {
   containerStyle: {
     marginBottom: 25,
@@ -73,12 +75,6 @@ const Projects = (props) => {
   const [data, setData] = useState(null);
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeFilter, setActiveFilter] = useState('All');
-  const filterCategories = [
-    'All',
-    'Laravel & PHP',
-    'Mobile (Flutter/Android)',
-    'AI & Python',
-  ];
 
   useEffect(() => {
     fetch(endpoints.projects, {
