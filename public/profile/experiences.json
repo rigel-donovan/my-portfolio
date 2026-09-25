@@ -14,7 +14,7 @@
                 "Make decision recommendations and distribute them to the Credit Committee above.",
                 "Be responsible for achieving KPI targets.",
                 "Implement the company's credit policy in accordance with applicable SOPs and policies.",
-                "Conduct case analysis based on KPIs when necessary."
+                "Conduct case analysis based on KPIs when necessary ."
             ],
             "dateText": "2023 – 2024",
             "image": "images/experiences/adira.jpg",
@@ -52,9 +52,9 @@
             "workType": "Freelance",
             "companyDescription": "PT. PJMA 5 YK1 is an Indihome product seller company focused on home internet and modem services operating in Sleman, DIY.",
             "workDescription": [
-                "Market products online through Facebook Marketplace and run Facebook Ads campaigns to reach target audiences.",
-                "Conduct direct field promotions to potential customers with effective product presentations.",
-                "Perform market analysis and field surveys to identify sales opportunities and trends.",
+                "Executed digital campaigns across Facebook Marketplace and Meta Ads for IndiHome broadband products, generating consistent qualifying sales inquiries.",
+                "Analyzed field demographic data and competitive landscape in Sleman to optimize advertising spend and direct outreach conversion.",
+                "Conducted market analysis and field surveys to monitor market conditions.",
                 "Participate in weekly performance evaluations to monitor progress and achieve sales targets."
             ],
             "dateText": "Nov 2024 – Jul 2025",
@@ -72,11 +72,11 @@
             "workType": "Internship",
             "companyDescription": "Telkom Regional VI Kalimantan is a regional division of Telkom headquartered in Balikpapan, serving customers in the Kalimantan region with integrated telecommunications services.",
             "workDescription": [
-                "Perform project management using Trello and Jira tools for progress tracking and team collaboration.",
+                " Engineered a full-stack Internship Attendance Management Web Application utilizing Laravel, Livewire, PostgreSQL, Vite, and Tailwind CSS, successfully digitizing manual attendance logging.",
                 "Learn and utilize Git, Github, and modern libraries such as Livewire, Vite, and Tailwind CSS.",
-                "Design website UI/UX using Figma with focus on optimal user experience.",
-                "Develop internship attendance management website using PHP and Laravel Framework with database management.",
-                "Conduct testing and quality assurance for the website before production deployment.",
+                "Designed high-fidelity interactive wireframes and UI components in Figma, optimizing navigation flow and user adoption across desktop and mobile screens.",
+                "Monitored network performance, assisted in server diagnostic routines, and performed network troubleshooting using Cisco and Mikrotik software within the Regional Network Operation.",
+                " Participated in sprint planning and daily standups using Jira and Trello, maintaining clean version control and code reviews via Git/GitHub.",
                 "Report daily progress and work results to mentor to ensure compliance with company standards."
             ],
             "dateText": "Feb 2024 – Jun 2024",
@@ -95,9 +95,9 @@
             "workType": "Freelance",
             "companyDescription": "Raja Geprek is a F&B business selling quality Fried Chicken menu items, located in Makassar, South Sulawesi.",
             "workDescription": [
-                "Create attractive promotional banner designs using Adobe Photoshop for offline and online marketing needs.",
-                "Design product menu layouts that are visually appealing and easy to read using Photoshop.",
-                "Create professional logo designs using Photoshop and CorelDRAW aligned with company brand identity."
+                "Designed and established core visual identity assets, including official brand logo, color guidelines, and typography using CorelDraw and Adobe Photoshop.",
+                " Crafted customer-facing promotional banners, social media marketing creatives, and structured physical menu layouts to drive local sales and customer engagement.",
+                "Collaborated directly with business stakeholders to translate culinary product offerings into cohesive print and digital promotional media."
             ],
             "dateText": "Jun 2019 – Oct 2019",
             "image": "images/experiences/raja-geprek.jpg",
@@ -110,14 +110,15 @@
         {
             "title": "Software Engineering",
             "subtitle": "Freelance",
-            "subtitle2": "Freelance Web Development",
+            "subtitle2": "Freelance Software Engineering",
             "workType": "Freelance",
-            "companyDescription": "Freelance web developer providing custom website design and development services tailored to client needs with focus on user experience, performance, and SEO optimization.",
+            "companyDescription": "Freelance software engineer providing custom website design and development services tailored to client needs with focus on user experience, performance, and SEO optimization.",
             "workDescription": [
-                "Design and develop websites based on client requirements and specific needs.",
-                "Perform search engine optimization (SEO) to increase website visibility and organic traffic.",
-                "Run Google Ads campaigns to improve client reach and conversion rates.",
-                "Analyze performance metrics and provide improvement recommendations to achieve client business targets."
+                "Architected and deployed responsive custom web applications and business systems using Laravel, PHP, JavaScript, and Tailwind CSS tailored to client specifications.",
+                " Built internal Point-of-Sale (POS) and administrative management systems, eliminating manual bottlenecks and improving operational processing efficiency for commercial clients.",
+                "Implemented on-page SEO best practices and managed targeted Google Ads campaigns, driving substantial organic traffic expansion and lead acquisition.",
+                "Optimized SEO performance to increase client website traffic and customer acquisition",
+                "Handled end-to-end development, domain configuration, cloud deployment, and ongoing software maintenance across production environments."
             ],
             "dateText": "Oct 2024 – Present",
             "image": "images/experiences/freelance.jpg",
