@@ -64,11 +64,6 @@ function Home() {
         <div className="sujuds-hero-grid">
           {/* Left Column: Text & CTAs */}
           <div className="sujuds-hero-left">
-            {/* Status Badge */}
-            <div className="sujuds-hero-badge">
-              <span className="sujuds-hero-badge-dot" />
-              <span>Available for Opportunities</span>
-            </div>
 
             {/* Big Bold Name (Sujud Style) */}
             <h1 className="sujuds-hero-name">
