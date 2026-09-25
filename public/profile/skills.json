@@ -4,34 +4,88 @@
         {
             "category": "Languages & Core",
             "items": [
-                { "title": "PHP", "icon": "images/skills/php.png" },
-                { "title": "JavaScript", "icon": "images/skills/js.png" },
-                { "title": "TypeScript", "icon": "images/skills/typescript.png" },
-                { "title": "Python", "icon": "images/skills/python.png" },
-                { "title": "HTML5", "icon": "images/skills/html.png" },
-                { "title": "CSS3", "icon": "images/skills/css.png" }
+                {
+                    "title": "PHP",
+                    "icon": "images/skills/php.png"
+                },
+                {
+                    "title": "JavaScript",
+                    "icon": "images/skills/js.png"
+                },
+                {
+                    "title": "TypeScript",
+                    "icon": "images/skills/typescript.png"
+                },
+                {
+                    "title": "Python",
+                    "icon": "images/skills/python.png"
+                },
+                {
+                    "title": "HTML5",
+                    "icon": "images/skills/html.png"
+                },
+                {
+                    "title": "CSS3",
+                    "icon": "images/skills/css.png"
+                }
             ]
         },
         {
             "category": "Frameworks & Libraries",
             "items": [
-                { "title": "Laravel", "icon": "images/skills/laravel.png" },
-                { "title": "Livewire", "icon": "images/skills/livewire.png" },
-                { "title": "React", "icon": "images/skills/react.png" },
-                { "title": "Node.js", "icon": "images/skills/nodejs.png" },
-                { "title": "CodeIgniter", "icon": "images/skills/ci.png" },
-                { "title": "WordPress", "icon": "images/skills/wordpress.png" }
+                {
+                    "title": "Laravel",
+                    "icon": "images/skills/laravel.png"
+                },
+                {
+                    "title": "Livewire",
+                    "icon": "images/skills/livewire.png"
+                },
+                {
+                    "title": "React",
+                    "icon": "images/skills/react.png"
+                },
+                {
+                    "title": "Node.js",
+                    "icon": "images/skills/nodejs.png"
+                },
+                {
+                    "title": "CodeIgniter",
+                    "icon": "images/skills/ci.png"
+                },
+                {
+                    "title": "WordPress",
+                    "icon": "images/skills/wordpress.png"
+                }
             ]
         },
         {
             "category": "Databases & Developer Tools",
             "items": [
-                { "title": "MySQL", "icon": "images/skills/mysql.png" },
-                { "title": "Git", "icon": "images/skills/git.png" },
-                { "title": "GitHub", "icon": "images/skills/github.png" },
-                { "title": "Docker", "icon": "images/skills/docker.png" },
-                { "title": "Firebase", "icon": "images/skills/firebase.png" },
-                { "title": "VS Code", "icon": "images/skills/vs code.png" }
+                {
+                    "title": "MySQL",
+                    "icon": "images/skills/mysql.png"
+                },
+                {
+                    "title": "Git",
+                    "icon": "images/skills/git.png"
+                },
+                {
+                    "title": "GitHub",
+                    "icon": "images/skills/github.png"
+                },
+                {
+                    "title": "Docker",
+                    "icon": "images/skills/docker.png"
+                },
+                {
+                    "title": "Firebase",
+                    "icon": "images/skills/firebase.png"
+                },
+                {
+                    "title": "VS Code",
+                    "icon": "images/skills/vs code.png"
+                }
             ]
         }
     ],
