@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Container, Row } from 'react-bootstrap';
-// ThemeContext removed — not used in this component
+import { ThemeContext } from 'styled-components';
 import PropTypes from 'prop-types';
 import Header from './Header';
 import endpoints from '../constants/endpoints';
@@ -11,24 +11,12 @@ const styles = {
   containerStyle: {
     marginBottom: 25,
   },
-  introStyle: {
-    textAlign: 'center',
-    marginBottom: 40,
-    fontSize: '1.1em',
-    lineHeight: 1.7,
-  },
-  showMoreStyle: {
-    margin: 25,
-    padding: '10px 30px',
-    fontSize: '1em',
-    fontWeight: 500,
-    borderRadius: 6,
-    transition: 'all 0.3s ease',
-  },
-  projectsCountStyle: {
-    fontSize: '0.9em',
-    opacity: 0.8,
-    marginTop: 10,
+  filterContainer: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    gap: 10,
+    marginBottom: 35,
   },
   modalOverlay: {
     position: 'fixed',
@@ -80,10 +68,14 @@ const styles = {
   },
 };
 
+const filterCategories = ['All', 'Laravel & PHP', 'Mobile (Flutter/Android)', 'Machine Learning (AI & Python)'];
+
 const Projects = (props) => {
   const { header } = props;
+  const theme = useContext(ThemeContext);
   const [data, setData] = useState(null);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [activeFilter, setActiveFilter] = useState('All');
 
   useEffect(() => {
     fetch(endpoints.projects, {
@@ -101,28 +93,71 @@ const Projects = (props) => {
   const handleCloseModal = () => {
     setSelectedProject(null);
   };
+
+  const filteredProjects = data?.projects?.filter((project) => {
+    if (activeFilter === 'All') return true;
+    const tags = project.tags || [];
+    if (activeFilter === 'Laravel & PHP') {
+      return tags.some((t) => ['Laravel', 'PHP', 'Codeigniter'].includes(t));
+    }
+    if (activeFilter === 'Mobile (Flutter/Android)') {
+      return tags.some((t) => ['Flutter', 'Android', 'Kotlin'].includes(t));
+    }
+    if (activeFilter === 'AI & Python') {
+      return tags.some((t) => ['Python', 'Streamlit', 'AI', 'Machine Learning', 'Chatbot'].includes(t));
+    }
+    return true;
+  });
+
   return (
     <>
       <Header title={header} />
-      {data
-        ? (
-          <div className="section-content-container">
-            <Container style={styles.containerStyle}>
+      {data ? (
+        <div className="section-content-container">
+          <Container style={styles.containerStyle}>
+            {/* Filter Tabs */}
+            <div style={styles.filterContainer}>
+              {filterCategories.map((cat) => {
+                const isActive = activeFilter === cat;
+                return (
+                  <button
+                    key={cat}
+                    type="button"
+                    onClick={() => setActiveFilter(cat)}
+                    style={{
+                      padding: '8px 18px',
+                      borderRadius: 20,
+                      fontSize: '0.9em',
+                      fontWeight: isActive ? 700 : 500,
+                      backgroundColor: isActive ? (theme.accentColor || '#3D84C6') : 'transparent',
+                      color: isActive ? '#fff' : theme.color,
+                      border: `1.5px solid ${theme.accentColor || '#3D84C6'}`,
+                      cursor: 'pointer',
+                      transition: 'all 0.25s ease',
+                      boxShadow: isActive ? '0 4px 12px rgba(61, 132, 198, 0.35)' : 'none',
+                    }}
+                  >
+                    {cat}
+                    {cat === 'All' && data.projects ? ` (${data.projects.length})` : ''}
+                  </button>
+                );
+              })}
+            </div>
 
-              {/* Projects Grid */}
-              <Row xs={1} sm={1} md={2} lg={3} className="g-4">
-                {data.projects?.map((project) => (
-                  <div key={project.title}>
-                    <ProjectCard
-                      project={project}
-                      onImageClick={handleProjectImageClick}
-                    />
-                  </div>
-                ))}
-              </Row>
-            </Container>
-          </div>
-        ) : <FallbackSpinner /> }
+            {/* Projects Grid */}
+            <Row xs={1} sm={1} md={2} lg={3} className="g-4">
+              {filteredProjects?.map((project) => (
+                <div key={project.title}>
+                  <ProjectCard
+                    project={project}
+                    onImageClick={handleProjectImageClick}
+                  />
+                </div>
+              ))}
+            </Row>
+          </Container>
+        </div>
+      ) : <FallbackSpinner />}
 
       {/* Modal Popup */}
       {selectedProject && (

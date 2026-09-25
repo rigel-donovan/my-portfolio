@@ -8,7 +8,7 @@
         {
             "component": "Skills",
             "path": "/skills",
-            "headerTitle": "Skills"
+            "headerTitle": "Skills & Certifications"
         },
         {
             "component": "Education",

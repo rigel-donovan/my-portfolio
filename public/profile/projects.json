@@ -218,26 +218,6 @@
                 "Bootstrap",
                 "Midtrans"
             ]
-        },
-        {
-            "image": "images/projects/PORTFOLIO RIGEL.png",
-            "title": "My Portfolio",
-            "bodyText": "- Developer Portfolio Website made in React\n - Fully customizable and dynamic, easily change data and images.\n - Dark Mode Support",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/rigel-sayudha/my-portfolio"
-                },
-                {
-                    "text": "Live",
-                    "href": "https://portfolio-rigel.vercel.app"
-                }
-            ],
-            "tags": [
-                "React",
-                "Portfolio",
-                "JavaScript"
-            ]
         }
     ]
 }

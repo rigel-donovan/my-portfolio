@@ -14,21 +14,16 @@
     "education": {
         "degree": "Bachelor of Information Systems",
         "institution": "AMIKOM University Yogyakarta",
-        "year": "2021 - 2025",
-        // "gpa": "3.67 out of 4.00",
-        // "documents": {
-        //     "diploma": "https://drive.google.com/file/d/1B4wtNVwVZX2aT4mPv4-7apWV_Fk8pnVd/view?usp=sharing",
-        //     "transcript": "https://drive.google.com/file/d/1f7G3XW39nbJ-ZJkRelkQ_G11F0m3F440/view?usp=sharing"
-        // }
+        "year": "2021 - 2025"
     },
     "contact": {
         "phone": "+6285604450227",
         "whatsapp": "https://wa.me/6285604450227",
         "email": "rigeldonovan@gmail.com",
         "linkedin": "https://www.linkedin.com/in/rigel-donovan",
-        "portfolio": "https://portfolio-rigel.vercel.app/",
+        "portfolio": "https://rigeldonovan.vercel.app/",
         "instagram": "https://www.instagram.com/rigeldonovan/",
-        "address": "Jl. Wonosari RT 26 No 68, Gunungsari Ilir, Balikpa         pan 76121"
+        "address": "Balikpapan, Indonesia"
     },
     "skills": [
         "Teamwork",

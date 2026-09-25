@@ -1,9 +1,71 @@
+/* Tech Skills Section */
+.tech-skills-section {
+  margin-bottom: 60px;
+}
+
+.skill-category-block {
+  margin-bottom: 32px;
+}
+
+.skill-category-title {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.skill-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 576px) {
+  .skill-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+}
+
+.skill-item-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justifyContent: center;
+  padding: 16px 12px;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+  text-align: center;
+}
+
+.skill-item-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-item-icon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  margin-bottom: 8px;
+  transition: transform 0.25s ease;
+}
+
+.skill-item-card:hover .skill-item-icon {
+  transform: scale(1.12);
+}
+
+.skill-item-title {
+  font-size: 0.88em;
+  font-weight: 600;
+  margin: 0;
+}
+
 /* Skills/Certificates Grid Layout */
 .certificates-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  margin-top: 30px;
+  margin-top: 24px;
 }
 
 /* Tablet - 2 columns */

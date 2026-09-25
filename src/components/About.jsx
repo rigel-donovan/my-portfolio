@@ -351,7 +351,7 @@ function About(props) {
                       }}
                     >
                       <div style={styles.educationTitle}>
-                        Educated
+                        Education
                       </div>
                       <div style={{ color: theme.accentColor, fontWeight: 'bold', marginBottom: 5 }}>
                         {data.education.institution}

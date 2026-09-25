@@ -77,6 +77,7 @@ const icons = {
 const iconMap = {
   Home: 'home',
   About: 'about',
+  'Skills & Certifications': 'achievements',
   'Achievements & Certifications': 'achievements',
   Education: 'education',
   Projects: 'projects',
