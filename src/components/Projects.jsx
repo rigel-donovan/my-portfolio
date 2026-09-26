@@ -91,20 +91,20 @@ const Projects = (props) => {
     setSelectedProject(null);
   };
 
-  const filteredProjects = data?.projects?.filter((project) => {
-    if (activeFilter === 'All') return true;
-    const tags = project.tags || [];
-    if (activeFilter === 'Laravel & PHP') {
-      return tags.some((t) => ['Laravel', 'PHP', 'Codeigniter'].includes(t));
-    }
-    if (activeFilter === 'Mobile (Flutter/Android)') {
-      return tags.some((t) => ['Flutter', 'Android', 'Kotlin'].includes(t));
-    }
-    if (activeFilter === 'Machine Learning (AI & Python)' || activeFilter === 'AI & Python') {
-      return tags.some((t) => ['Python', 'Streamlit', 'AI', 'Machine Learning', 'Chatbot'].includes(t));
-    }
-    return true;
-  });
+  // const filteredProjects = data?.projects?.filter((project) => {
+  //   if (activeFilter === 'All') return true;
+  //   const tags = project.tags || [];
+  //   if (activeFilter === 'Laravel & PHP') {
+  //     return tags.some((t) => ['Laravel', 'PHP', 'Codeigniter'].includes(t));
+  //   }
+  //   if (activeFilter === 'Mobile (Flutter/Android)') {
+  //     return tags.some((t) => ['Flutter', 'Android', 'Kotlin'].includes(t));
+  //   }
+  //   if (activeFilter === 'Machine Learning (AI & Python)' || activeFilter === 'AI & Python') {
+  //     return tags.some((t) => ['Python', 'Streamlit', 'AI', 'Machine Learning', 'Chatbot'].includes(t));
+  //   }
+  //   return true;
+  // });
 
   return (
     <>
