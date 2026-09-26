@@ -367,24 +367,105 @@
 }
 
 @media (max-width: 576px) {
+  .sujuds-home-wrapper {
+    padding: 24px 0 28px;
+    min-height: auto;
+  }
+
   .sujuds-hero-container {
-    padding: 0 20px;
+    padding: 0 16px;
+  }
+
+  .sujuds-hero-grid {
+    gap: 18px;
+    min-height: auto;
+    padding-top: 0;
+  }
+
+  .sujuds-hero-left {
+    width: 100%;
+    align-items: center;
+  }
+
+  .sujuds-hero-name {
+    font-size: clamp(2.4rem, 17vw, 4.2rem);
+    line-height: 0.96;
+    margin-bottom: 12px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .sujuds-hero-name span {
+    display: block;
+  }
+
+  .sujuds-hero-headline {
+    font-size: 1.05rem;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .sujuds-typewriter-text {
+    display: inline-block;
+    min-height: 1.5em;
+  }
+
+  .sujuds-hero-bio {
+    font-size: 0.93rem;
+    line-height: 1.6;
+    margin-bottom: 22px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .sujuds-hero-right {
+    width: 100%;
+  }
+
+  .sujuds-portrait-frame {
+    max-width: 260px;
+  }
+
+  .sujuds-portrait-frame::before {
+    width: 260px;
+    height: 260px;
+    top: 18%;
   }
 
   .sujuds-portrait-img {
     max-height: 35vh;
-    max-width: 240px;
+    max-width: 220px;
   }
 
   .sujuds-btn-group {
     flex-direction: column;
     width: 100%;
+    gap: 10px;
   }
 
   .sujuds-btn-primary,
   .sujuds-btn-secondary,
   .sujuds-btn-tertiary {
     width: 100%;
+    max-width: 360px;
     justify-content: center;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .sujuds-social-fixed {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+    width: 100%;
+    padding-bottom: 8px;
+  }
+
+  .sujuds-social-icon-btn {
+    width: 42px;
+    height: 42px;
   }
 }
