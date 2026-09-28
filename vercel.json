@@ -1,8 +1,5 @@
 {
   "buildCommand": "npm run build",
   "installCommand": "npm ci --legacy-peer-deps",
-  "outputDirectory": "build",
-  "env": {
-    "CI": "true"
-  }
+  "outputDirectory": "build"
 }
