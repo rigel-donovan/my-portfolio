@@ -1,5 +1,6 @@
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import React, { useEffect, useState, useContext } from 'react';
+import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import styled, { ThemeContext } from 'styled-components';
@@ -8,6 +9,21 @@ import ThemeToggler from './ThemeToggler';
 
 const isDark = (theme) => theme.bsPrimaryVariant === 'dark';
 
+const getNavbarBackground = (theme, isHomePage) => {
+  if (isHomePage) return 'transparent';
+  return isDark(theme) ? 'rgba(11, 13, 19, 0.85)' : 'rgba(255, 255, 255, 0.9)';
+};
+
+const getNavbarBorder = (theme, isHomePage) => {
+  if (isHomePage) return 'transparent';
+  return isDark(theme) ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.07)';
+};
+
+const getNavbarShadow = (theme, isHomePage) => {
+  if (isHomePage) return 'none';
+  return isDark(theme) ? '0 4px 20px rgba(0, 0, 0, 0.3)' : '0 4px 16px rgba(0, 0, 0, 0.05)';
+};
+
 const DesktopNavWrapper = styled.div`
   @media (max-width: 768px) {
     display: none !important;
@@ -15,17 +31,11 @@ const DesktopNavWrapper = styled.div`
 `;
 
 const StyledNavbar = styled(Navbar)`
-  background: ${(props) => (isDark(props.theme)
-    ? 'rgba(11, 13, 19, 0.85)'
-    : 'rgba(255, 255, 255, 0.9)')} !important;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid ${(props) => (isDark(props.theme)
-    ? 'rgba(255, 255, 255, 0.08)'
-    : 'rgba(0, 0, 0, 0.07)')};
-  box-shadow: ${(props) => (isDark(props.theme)
-    ? '0 4px 20px rgba(0, 0, 0, 0.3)'
-    : '0 4px 16px rgba(0, 0, 0, 0.05)')};
+  background: ${(props) => getNavbarBackground(props.theme, props.$homePage)} !important;
+  backdrop-filter: ${(props) => (props.$homePage ? 'none' : 'blur(16px)')};
+  -webkit-backdrop-filter: ${(props) => (props.$homePage ? 'none' : 'blur(16px)')};
+  border-bottom: 1px solid ${(props) => getNavbarBorder(props.theme, props.$homePage)};
+  box-shadow: ${(props) => getNavbarShadow(props.theme, props.$homePage)};
   padding: 10px 0;
   transition: all 0.3s ease;
   z-index: 1040;
@@ -179,9 +189,10 @@ const ThemeTogglerBox = styled.div`
   }
 `;
 
-const NavBar = () => {
+const NavBar = ({ location }) => {
   const theme = useContext(ThemeContext);
   const [data, setData] = useState(null);
+  const isHomePage = location?.pathname === '/';
 
   useEffect(() => {
     fetch(endpoints.navbar, {
@@ -198,6 +209,7 @@ const NavBar = () => {
         fixed="top"
         className="navbar-custom"
         theme={theme}
+        $homePage={isHomePage}
       >
         <Container fluid="xl" className="d-flex align-items-center justify-content-between">
           <BrandLink to="/" theme={theme}>
@@ -262,6 +274,12 @@ const NavBar = () => {
       </StyledNavbar>
     </DesktopNavWrapper>
   );
+};
+
+NavBar.propTypes = {
+  location: PropTypes.shape({
+    pathname: PropTypes.string,
+  }).isRequired,
 };
 
 const NavBarWithRouter = withRouter(NavBar);
