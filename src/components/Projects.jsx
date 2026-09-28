@@ -7,8 +7,6 @@ import endpoints from '../constants/endpoints';
 import ProjectCard from './projects/ProjectCard';
 import FallbackSpinner from './FallbackSpinner';
 
-const filterCategories = ['All', 'Laravel & PHP', 'Mobile (Flutter/Android)', 'AI & Python'];
-
 const styles = {
   containerStyle: {
     marginBottom: 25,
