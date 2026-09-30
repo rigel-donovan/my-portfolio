@@ -2,12 +2,16 @@
     "projects": [
         {
             "image": "images/projects/wa-bot.png",
-            "title": "AI Financial BOT - Personal Finance Assistant",
+            "title": "AI Finance BOT - Personal Finance Assistant",
             "bodyText": "- AI-powered personal finance bot for recording and reviewing daily income and expenses.\n - Understands natural-language messages for transaction entry, edits, summaries, and financial questions.\n - Uses image processing and OCR to read receipt totals and purchased items from photos.\n - Connects with Telegram and WhatsApp, with transaction data stored in Google Sheets.",
             "links": [
                 {
                     "text": "GitHub",
                     "href": "https://github.com/rigel-donovan/wa-bot"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://wa-bot-tau.vercel.app/"
                 }
             ],
             "tags": [
