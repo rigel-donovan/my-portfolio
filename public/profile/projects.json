@@ -1,6 +1,28 @@
 {
     "projects": [
         {
+            "image": "images/projects/ai-financial-bot.svg",
+            "title": "AI Financial BOT - Personal Finance Assistant",
+            "bodyText": "- AI-powered personal finance bot for recording and reviewing daily income and expenses.\n - Understands natural-language messages for transaction entry, edits, summaries, and financial questions.\n - Uses image processing and OCR to read receipt totals and purchased items from photos.\n - Connects with Telegram and WhatsApp, with transaction data stored in Google Sheets.",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/rigel-donovan/wa-bot"
+                }
+            ],
+            "tags": [
+                "Next.js",
+                "TypeScript",
+                "AI",
+                "Natural Language Processing",
+                "Image Processing",
+                "OCR",
+                "Telegram Bot",
+                "WhatsApp",
+                "Google Sheets"
+            ]
+        },
+        {
             "image": "#",
             "title": "TesCAT - Computer Assisted Test Platform",
             "bodyText": "- Platform for simulating **Computer Assisted Test (CAT)** for **CPNS, Sekolah Kedinasan and Kopdes Merah Putih**.\n - Built to support interactive exam flows with **timer-based question sessions**, scoring, and result analytics.\n - Designed for online assessments with a clean, responsive interface for desktop and mobile users.\n - Suitable for mock exams and recruitment preparation, both for public service and corporate selection.",
