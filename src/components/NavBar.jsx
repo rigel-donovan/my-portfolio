@@ -73,7 +73,7 @@ const BrandName = styled.span`
   font-size: 1.15rem;
   font-weight: 700;
   letter-spacing: -0.01em;
-  color: ${(props) => (isDark(props.theme) ? '#f8fafc' : '#0f172a')};
+  color: ${(props) => (props.$homePage || isDark(props.theme) ? '#f8fafc' : '#0f172a')};
   display: inline-flex;
   align-items: center;
 
@@ -105,7 +105,7 @@ const InternalNavLink = styled(NavLink)`
   letter-spacing: 0.01em;
   padding: 7px 13px;
   border-radius: 8px;
-  color: ${(props) => (isDark(props.theme)
+  color: ${(props) => (props.$homePage || isDark(props.theme)
     ? 'rgba(241, 245, 249, 0.72)'
     : 'rgba(30, 41, 59, 0.75)')};
   background: transparent;
@@ -114,19 +114,19 @@ const InternalNavLink = styled(NavLink)`
 
   &:hover {
     text-decoration: none !important;
-    color: ${(props) => (isDark(props.theme) ? '#ffffff' : '#0f172a')};
-    background: ${(props) => (isDark(props.theme)
+    color: ${(props) => (props.$homePage || isDark(props.theme) ? '#ffffff' : '#0f172a')};
+    background: ${(props) => (props.$homePage || isDark(props.theme)
     ? 'rgba(255, 255, 255, 0.08)'
     : 'rgba(0, 0, 0, 0.05)')};
     transform: translateY(-1px);
   }
 
   &.navbar__link--active {
-    color: ${(props) => (isDark(props.theme) ? '#ffffff' : '#1d4ed8')};
-    background: ${(props) => (isDark(props.theme)
+    color: ${(props) => (props.$homePage || isDark(props.theme) ? '#ffffff' : '#1d4ed8')};
+    background: ${(props) => (props.$homePage || isDark(props.theme)
     ? `${props.theme.accentColor}25`
     : `${props.theme.accentColor}18`)};
-    border-color: ${(props) => (isDark(props.theme)
+    border-color: ${(props) => (props.$homePage || isDark(props.theme)
     ? `${props.theme.accentColor}45`
     : `${props.theme.accentColor}35`)};
     font-weight: 600;
@@ -152,10 +152,10 @@ const ExternalNavLink = styled.a`
   margin-left: 6px;
   border-radius: 8px;
   border: 1px solid ${(props) => `${props.theme.accentColor}60`};
-  background: ${(props) => (isDark(props.theme)
+  background: ${(props) => (props.$homePage || isDark(props.theme)
     ? `${props.theme.accentColor}18`
     : `${props.theme.accentColor}12`)};
-  color: ${(props) => (isDark(props.theme) ? '#93c5fd' : '#1d4ed8')};
+  color: ${(props) => (props.$homePage || isDark(props.theme) ? '#93c5fd' : '#1d4ed8')};
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
@@ -220,7 +220,7 @@ const NavBar = ({ location }) => {
                 theme={theme}
               />
             )}
-            <BrandName theme={theme}>
+            <BrandName theme={theme} $homePage={isHomePage}>
               Rigel
               <span className="accent-part">Donovan</span>
             </BrandName>
@@ -235,6 +235,7 @@ const NavBar = ({ location }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   theme={theme}
+                  $homePage={isHomePage}
                 >
                   {section.title}
                   <svg
@@ -261,6 +262,7 @@ const NavBar = ({ location }) => {
                   className="navbar__link"
                   to={section.href}
                   theme={theme}
+                  $homePage={isHomePage}
                 >
                   {section.title}
                 </InternalNavLink>

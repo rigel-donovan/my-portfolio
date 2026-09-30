@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Suspense } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, useLocation } from 'react-router-dom';
 import FallbackSpinner from './components/FallbackSpinner';
 import NavBarWithRouter from './components/NavBar';
 import BottomNav from './components/BottomNav';
@@ -8,6 +8,8 @@ import endpoints from './constants/endpoints';
 
 function MainApp() {
   const [data, setData] = useState(null);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     fetch(endpoints.routes, {
@@ -19,7 +21,7 @@ function MainApp() {
   }, []);
 
   return (
-    <div className="MainApp">
+    <div className={`MainApp${isHomePage ? ' MainApp--home' : ''}`}>
       <NavBarWithRouter />
       <BottomNav />
       <main className="main">

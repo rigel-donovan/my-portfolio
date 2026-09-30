@@ -28,6 +28,16 @@
   flex: 1;
 }
 
+.MainApp--home {
+  margin-top: 0;
+  min-height: 100vh;
+}
+
+.MainApp--home .sujuds-home-wrapper {
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
 .main {
   width: 100%;
   display: flex;
@@ -96,5 +106,14 @@ section.timeline-card-content div.card-description>p {
   .MainApp {
     margin-top: 0;
     padding-bottom: 88px;
+  }
+
+  .MainApp--home {
+    min-height: calc(100vh - 88px);
+  }
+
+  .MainApp--home .sujuds-home-wrapper {
+    min-height: calc(100vh - 88px);
+    padding-top: 18px;
   }
 }
