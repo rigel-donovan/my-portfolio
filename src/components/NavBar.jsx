@@ -9,20 +9,11 @@ import ThemeToggler from './ThemeToggler';
 
 const isDark = (theme) => theme.bsPrimaryVariant === 'dark';
 
-const getNavbarBackground = (theme, isHomePage) => {
-  if (isHomePage) return 'transparent';
-  return isDark(theme) ? 'rgba(11, 13, 19, 0.85)' : 'rgba(255, 255, 255, 0.9)';
-};
+const getNavbarBackground = () => 'transparent';
 
-const getNavbarBorder = (theme, isHomePage) => {
-  if (isHomePage) return 'transparent';
-  return isDark(theme) ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.07)';
-};
+const getNavbarBorder = () => 'transparent';
 
-const getNavbarShadow = (theme, isHomePage) => {
-  if (isHomePage) return 'none';
-  return isDark(theme) ? '0 4px 20px rgba(0, 0, 0, 0.3)' : '0 4px 16px rgba(0, 0, 0, 0.05)';
-};
+const getNavbarShadow = () => 'none';
 
 const DesktopNavWrapper = styled.div`
   @media (max-width: 768px) {
@@ -32,8 +23,8 @@ const DesktopNavWrapper = styled.div`
 
 const StyledNavbar = styled(Navbar)`
   background: ${(props) => getNavbarBackground(props.theme, props.$homePage)} !important;
-  backdrop-filter: ${(props) => (props.$homePage ? 'none' : 'blur(16px)')};
-  -webkit-backdrop-filter: ${(props) => (props.$homePage ? 'none' : 'blur(16px)')};
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border-bottom: 1px solid ${(props) => getNavbarBorder(props.theme, props.$homePage)};
   box-shadow: ${(props) => getNavbarShadow(props.theme, props.$homePage)};
   padding: 10px 0;
