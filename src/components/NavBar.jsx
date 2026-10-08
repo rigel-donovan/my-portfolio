@@ -9,11 +9,20 @@ import ThemeToggler from './ThemeToggler';
 
 const isDark = (theme) => theme.bsPrimaryVariant === 'dark';
 
-const getNavbarBackground = () => 'transparent';
+const getNavbarBackground = (theme, scrolled) => {
+  if (!scrolled) return 'transparent';
+  return isDark(theme) ? 'rgba(11, 13, 19, 0.9)' : 'rgba(255, 255, 255, 0.9)';
+};
 
-const getNavbarBorder = () => 'transparent';
+const getNavbarBorder = (theme, scrolled) => {
+  if (!scrolled) return 'transparent';
+  return isDark(theme) ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.07)';
+};
 
-const getNavbarShadow = () => 'none';
+const getNavbarShadow = (theme, scrolled) => {
+  if (!scrolled) return 'none';
+  return isDark(theme) ? '0 4px 20px rgba(0, 0, 0, 0.3)' : '0 4px 16px rgba(0, 0, 0, 0.05)';
+};
 
 const DesktopNavWrapper = styled.div`
   @media (max-width: 768px) {
@@ -22,11 +31,11 @@ const DesktopNavWrapper = styled.div`
 `;
 
 const StyledNavbar = styled(Navbar)`
-  background: ${(props) => getNavbarBackground(props.theme, props.$homePage)} !important;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  border-bottom: 1px solid ${(props) => getNavbarBorder(props.theme, props.$homePage)};
-  box-shadow: ${(props) => getNavbarShadow(props.theme, props.$homePage)};
+  background: ${(props) => getNavbarBackground(props.theme, props.$scrolled)} !important;
+  backdrop-filter: ${(props) => (props.$scrolled ? 'blur(16px)' : 'none')};
+  -webkit-backdrop-filter: ${(props) => (props.$scrolled ? 'blur(16px)' : 'none')};
+  border-bottom: 1px solid ${(props) => getNavbarBorder(props.theme, props.$scrolled)};
+  box-shadow: ${(props) => getNavbarShadow(props.theme, props.$scrolled)};
   padding: 10px 0;
   transition: all 0.3s ease;
   z-index: 1040;
@@ -183,7 +192,14 @@ const ThemeTogglerBox = styled.div`
 const NavBar = ({ location }) => {
   const theme = useContext(ThemeContext);
   const [data, setData] = useState(null);
+  const [scrolled, setScrolled] = useState(() => window.scrollY > 12);
   const isHomePage = location?.pathname === '/';
+
+  useEffect(() => {
+    const updateScrollState = () => setScrolled(window.scrollY > 12);
+    window.addEventListener('scroll', updateScrollState, { passive: true });
+    return () => window.removeEventListener('scroll', updateScrollState);
+  }, []);
 
   useEffect(() => {
     fetch(endpoints.navbar, {
@@ -201,6 +217,7 @@ const NavBar = ({ location }) => {
         className="navbar-custom"
         theme={theme}
         $homePage={isHomePage}
+        $scrolled={scrolled}
       >
         <Container fluid="xl" className="d-flex align-items-center justify-content-between">
           <BrandLink to="/" theme={theme}>
