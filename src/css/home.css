@@ -43,6 +43,7 @@
   align-items: center;
   gap: 40px;
   min-height: calc(100vh - 140px);
+  min-width: 0;
 }
 
 /* Left Column */
@@ -53,6 +54,7 @@
   text-align: left;
   z-index: 3;
   animation: sujudsFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  min-width: 0;
 }
 
 /* Badge */
@@ -393,11 +395,12 @@
   }
 
   .sujuds-hero-name {
-    font-size: clamp(3rem, 19vw, 5rem);
-    line-height: 0.88;
-    letter-spacing: -0.055em;
+    font-size: clamp(2.5rem, 13vw, 3.6rem);
+    line-height: 0.98;
+    letter-spacing: -0.045em;
     margin-bottom: 12px;
     width: 100%;
+    overflow-wrap: anywhere;
   }
 
   .sujuds-hero-name span {
@@ -483,5 +486,17 @@
   .sujuds-social-icon-btn {
     width: 40px;
     height: 40px;
+    flex: 0 0 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .sujuds-hero-name {
+    font-size: clamp(2.25rem, 12vw, 3rem);
+  }
+
+  .sujuds-hero-container {
+    padding-right: 18px;
+    padding-left: 18px;
   }
 }

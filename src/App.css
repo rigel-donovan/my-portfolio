@@ -115,5 +115,6 @@ section.timeline-card-content div.card-description>p {
   .MainApp--home .sujuds-home-wrapper {
     min-height: calc(100vh - 88px);
     padding-top: 18px;
+    padding-bottom: 24px;
   }
 }
