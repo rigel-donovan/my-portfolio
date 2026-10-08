@@ -112,15 +112,17 @@ const BottomNavWrapper = styled.nav`
     right: 12px;
     z-index: 1050;
     height: 64px;
-    background: transparent;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border: 1px solid transparent;
+    background: ${(props) => (isDark(props.theme) ? 'rgba(22, 22, 30, 0.92)' : 'rgba(255, 255, 255, 0.95)')};
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid ${(props) => (isDark(props.theme) ? 'rgba(255, 255, 255, 0.06)' : 'rgba(0, 0, 0, 0.06)')};
     border-radius: 20px;
     padding: 0 4px;
     justify-content: space-around;
     align-items: center;
-    box-shadow: none;
+    box-shadow: ${(props) => (isDark(props.theme)
+    ? '0 8px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255,255,255,0.03) inset'
+    : '0 8px 32px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(255,255,255,0.8) inset')};
   }
 `;
 
