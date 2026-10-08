@@ -104,8 +104,8 @@
         },
         {
             "image": "images/projects/POSTER DESA GANTEN LANDSCAPE.png",
-            "title": "Desa Ganten - Village Portal",
-            "bodyText": "- Official village website providing information system about Desa Ganten\n - Developed using PHP and Laravel Framework for reliable performance.\n - Features tourism information, local news, and community services.\n - Fully responsive design optimized for mobile and desktop devices.\n - Report creation services for specific purposes such as domicile certificates, marriage certificates, etc.\n - PDF generate for report.",
+            "title": "Desa Ganten - Portal Desa",
+            "bodyText": "- Official Portal Desa providing information system about Desa Ganten\n - Developed using PHP and Laravel Framework for reliable performance.\n - Features tourism information, local news, and community services.\n - Fully responsive design optimized for mobile and desktop devices.\n - Report creation services for specific purposes such as domicile certificates, marriage certificates, etc.\n - PDF generate for report.",
             "links": [
                 {
                     "text": "GitHub",
