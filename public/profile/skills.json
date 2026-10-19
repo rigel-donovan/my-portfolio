@@ -96,6 +96,16 @@
     ],
     "certificates": [
         {
+            "title": "Sekolah Pasar Modal",
+            "issuer": "Indonesia Stock Exchange",
+            "logo": "images/certificates/spm.jpg",
+            "certificateImage": "images/certificates/spm.jpg",
+            "issueDate": "Aug 2026",
+            "expiryDate": null,
+            "credentialId": "0826BPPKP000024",
+            "description": "Sertifikat Pengalaman Untuk Masuk ke Dunia Saham bagi Pemula dari Para Mentor yang Berpengalaman di Dunia Saham"
+        },
+        {
             "title": "Membangun Aplikasi Gen AI dengan Microsoft Azure",
             "issuer": "Dicoding Indonesia",
             "logo": "images/certificates/Dicoding - Membangun Aplikasi Gen AI dengan Microsoft Azure.png",
