@@ -159,8 +159,8 @@
         },
         {
             "image": "images/projects/diabetes-analytics.jpg",
-            "title": "Diabetes Disease Prediction - Machine Learning",
-            "bodyText": "- Predictive analytics application for diabetes disease based on patient medical history.\n - Implemented using Decision Tree algorithm with **Python** and **Streamlit**.\n - Data processing with **Pandas** and **Numpy** libraries.\n - Professional visualizations using **Matplotlib** and **Seaborn**.",
+            "title": "Diabetes Disease Classification - Machine Learning",
+            "bodyText": "- Classification analytics application for diabetes disease based on patient medical history.\n - Implemented using Decision Tree algorithm with **Python** and **Streamlit**.\n - Data processing with **Pandas** and **Numpy** libraries.\n - Professional visualizations using **Matplotlib** and **Seaborn**.",
             "links": [
                 {
                     "text": "GitHub",
